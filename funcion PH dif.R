@@ -16,7 +16,7 @@ data=read_xlsx('ejemplo.xlsx')
 dif_sig=function(data){
 # calculo del pvalor
 data=data%>%
-  mutate(dif=por1-por2,
+  mutate(dif=est1-est2,
          zcal=dif/sqrt(ee2^2+ee1^2),
          pvalor=round(if_else(zcal<0,
                               2*pnorm(zcal),
