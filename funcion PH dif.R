@@ -7,12 +7,6 @@ library(tidyverse)
 # mostrar cifras significaticas (entero + decimal)
 options(digits=8)
 
-# ruta de trabajo
-setwd('D:/fabio/pedido Luis funcion prueba hipotesis diferencias')
-
-# abrir BD
-data=read_xlsx('ejemplo.xlsx')
-
 dif_sig=function(data){
 # calculo del pvalor
 data=data%>%
